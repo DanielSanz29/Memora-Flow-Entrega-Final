@@ -1,0 +1,14 @@
+digraph D {
+ graph [rankdir=LR, bgcolor="white", pad=.22, nodesep=.5, ranksep=.55, fontname="Arial"];
+ node [shape=box, style="rounded,filled", fillcolor="#F5F7F6", color="#A0AAA8", fontname="Arial", fontsize=10, margin="0.17"];
+ edge [fontname="Arial", fontsize=9, color="#596B68", arrowsize=.7];
+ browser [label="Navegador\nlocalhost:5173"];
+ front [label="frontend\nReact / Vite\nContenedor Docker", fillcolor="#E9F0EE", color="#446663"];
+ back [label="backend\nAPI REST\nlocalhost:3000", fillcolor="#E9F0EE", color="#446663"];
+ mysql [label="mysql\nMySQL 8.4\nvolumen persistente"];
+ pma [label="phpMyAdmin\nlocalhost:8080"];
+ browser -> front [label="HTTP"];
+ front -> back [label="/api + JWT"];
+ back -> mysql [label="SQL"];
+ pma -> mysql [label="administración"];
+}

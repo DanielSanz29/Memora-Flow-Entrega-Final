@@ -1,0 +1,28 @@
+VALIDACIÓN DE PREPARACIÓN PARA PRODUCCIÓN - MEMORA FLOW
+Fecha: 27/05/2026
+
+[1] Frontend preparado para build de producción
+- Comando: VITE_API_URL=/api npm run build
+- Resultado: SUPERADA
+- Motivo: la SPA se compila y utiliza la ruta relativa /api en vez de depender de localhost.
+
+[2] Backend preparado para servir frontend y API desde una única URL
+- Entorno de comprobación: NODE_ENV=production, DB_MODE=memory, PORT=3121
+- Rutas comprobadas: /, /catalogos y /api/health
+- Resultado: SUPERADA
+
+[3] Autenticación y flujo funcional reproducible
+- Script: scripts/ejecutar_pruebas_demo.py
+- Resultado: 20/20 pruebas SUPERADAS
+- Incluye: login, roles, expedientes, órdenes, catálogos, seguimiento gerencial y PDF.
+
+[4] Archivos preparados para Railway
+- Dockerfile multi-stage en la raíz: PRESENTE
+- railway.json con healthcheck /api/health: PRESENTE
+- .env.railway.example: PRESENTE
+- Inicialización automática MySQL mediante DB_INIT_ON_START: IMPLEMENTADA
+
+[5] Verificación pendiente del alumno
+- Construcción con Docker en Windows usando docker-compose.production.yml.
+- Subida a GitHub y despliegue en Railway con MySQL gestionado.
+- Comprobación de la URL pública y capturas finales para la memoria.

@@ -1,0 +1,33 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Catálogo floral</title><desc id="desc">Ilustración de flores blancas y hojas verdes en composición ceremonial.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF3F0"/><stop offset="1" stop-color="#F6F3EE"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="28" fill="url(#bg)"/>
+  <path d="M176 304C237 265 386 260 464 307" stroke="#CDD8D2" stroke-width="10" stroke-linecap="round"/>
+  <path d="M323 290C312 240 313 196 318 152M327 250C363 214 395 194 423 183M314 232C284 203 255 186 226 177" stroke="#557465" stroke-width="7" stroke-linecap="round"/>
+  <path d="M295 254C254 242 236 256 219 285C249 288 276 280 295 254ZM342 246C377 225 399 232 422 257C393 268 364 267 342 246ZM335 205C355 165 378 156 410 159C397 190 371 210 335 205ZM304 199C270 171 247 169 219 181C244 208 273 216 304 199Z" fill="#709282"/>
+  <g fill="#FCFCFA" stroke="#D9DED9" stroke-width="3">
+    <path d="M318 151C295 126 294 105 315 94C335 106 338 128 318 151Z"/>
+    <path d="M318 151C343 130 365 131 374 153C357 169 337 168 318 151Z"/>
+    <path d="M318 151C338 174 336 196 313 202C297 184 300 166 318 151Z"/>
+    <path d="M318 151C291 171 270 167 265 144C281 129 299 134 318 151Z"/>
+  </g>
+  <circle cx="318" cy="151" r="13" fill="#D3BB8E"/>
+  <g fill="#FDFCFA" stroke="#D9DED9" stroke-width="3">
+    <path d="M423 182C404 160 404 143 423 133C440 142 443 160 423 182Z"/>
+    <path d="M423 182C444 165 461 166 469 185C453 198 438 197 423 182Z"/>
+    <path d="M423 182C437 202 433 219 413 224C401 208 405 194 423 182Z"/>
+    <path d="M423 182C403 197 386 194 382 176C395 164 408 168 423 182Z"/>
+  </g>
+  <circle cx="423" cy="182" r="11" fill="#D3BB8E"/>
+  <g fill="#FDFCFA" stroke="#D9DED9" stroke-width="3">
+    <path d="M226 177C209 155 210 137 229 129C245 139 246 157 226 177Z"/>
+    <path d="M226 177C248 161 264 164 271 182C254 194 240 192 226 177Z"/>
+    <path d="M226 177C240 197 236 214 215 217C205 201 209 189 226 177Z"/>
+    <path d="M226 177C206 191 189 187 186 170C198 159 211 163 226 177Z"/>
+  </g>
+  <circle cx="226" cy="177" r="11" fill="#D3BB8E"/>
+</svg>

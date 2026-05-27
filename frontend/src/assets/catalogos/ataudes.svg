@@ -1,0 +1,18 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Colección de ataúdes</title><desc id="desc">Ilustración sobria de un ataúd de madera sobre fondo claro.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3F1EC"/><stop offset="1" stop-color="#E4E8E5"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="180" y1="135" x2="448" y2="292" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#977457"/><stop offset="1" stop-color="#604A3D"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="28" fill="url(#bg)"/>
+  <path d="M100 340C181 299 458 299 540 340" stroke="#CDD6D1" stroke-width="10" stroke-linecap="round"/>
+  <path d="M225 128L337 108L423 160L453 266L373 307L242 294L190 221L225 128Z" fill="url(#wood)" stroke="#4D3D34" stroke-width="5"/>
+  <path d="M226 129L337 109L424 160L242 294L190 221L226 129Z" fill="#A98562" opacity="0.38"/>
+  <path d="M245 151L334 134L396 170M217 212L409 177M230 258L424 218" stroke="#D8BB91" stroke-opacity=".38" stroke-width="4"/>
+  <path d="M310 183H352M331 162V205" stroke="#EFE5D6" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="235" cy="263" r="6" fill="#D4B486"/><circle cx="416" cy="211" r="6" fill="#D4B486"/>
+</svg>

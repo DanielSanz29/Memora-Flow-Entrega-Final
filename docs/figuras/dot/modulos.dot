@@ -1,0 +1,18 @@
+digraph M {
+ graph [rankdir=TB, bgcolor="white", pad=0.2, nodesep=0.38, ranksep=0.45, fontname="Arial"];
+ node [shape=box, style="rounded,filled", fillcolor="#F5F7F6", color="#A0AAA8", fontname="Arial", fontsize=10, margin="0.14,0.10"];
+ edge [color="#596B68", arrowsize=.65];
+ auth [label="Autenticación\nJWT y roles", fillcolor="#E9F0EE", color="#446663"];
+ expediente [label="Expedientes\nBúsqueda y alta"];
+ personas [label="Personas\nResponsable / fallecido"];
+ orden [label="Orden funeraria\nServicio y estado", fillcolor="#E9F0EE", color="#446663"];
+ catalogos [label="Catálogos\nProductos / servicios"];
+ presupuesto [label="Presupuesto\nSubtotal y total"];
+ obs [label="Seguimiento\nObservaciones"];
+ pdf [label="PDF final\nResumen exportable"];
+ admin [label="Administración\nUsuarios / catálogos"];
+ auth -> expediente -> personas -> orden;
+ orden -> catalogos -> presupuesto -> pdf;
+ orden -> obs;
+ auth -> admin;
+}

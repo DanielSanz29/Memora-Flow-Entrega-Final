@@ -1,0 +1,61 @@
+services:
+  mysql_prod:
+    image: mysql:8.4
+    container_name: memora_prod_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: memora_flow
+      MYSQL_USER: memora_user
+      MYSQL_PASSWORD: memora_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - memora_prod_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot_password"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  app_prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: memora_prod_app
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DB_MODE: mysql
+      DB_HOST: mysql_prod
+      DB_PORT: 3306
+      DB_NAME: memora_flow
+      DB_USER: memora_user
+      DB_PASSWORD: memora_password
+      DB_INIT_ON_START: "true"
+      JWT_SECRET: memora_local_produccion_solo_pruebas_cambiar_en_railway
+      JWT_EXPIRES_IN: 8h
+    ports:
+      - "3000:3000"
+    depends_on:
+      mysql_prod:
+        condition: service_healthy
+
+  phpmyadmin_prod:
+    image: phpmyadmin:5
+    container_name: memora_prod_phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: mysql_prod
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: root_password
+    ports:
+      - "8081:80"
+    depends_on:
+      mysql_prod:
+        condition: service_healthy
+
+volumes:
+  memora_prod_mysql_data:

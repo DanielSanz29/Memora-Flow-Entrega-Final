@@ -1,0 +1,36 @@
+{
+  "catalogo_asesor": "SUPERADA",
+  "catalogo_recepcion": "SUPERADA",
+  "gerencia_personal_pedidos": "SUPERADA",
+  "proteccion_rol_asesor_no_gerencia": "SUPERADA",
+  "resumen_gerencia": {
+    "personal": [
+      {
+        "id": 3,
+        "nombre": "Asesor Memora",
+        "email": "asesor@memora.local",
+        "rol": "asesor",
+        "total_pedidos": 1,
+        "importe_total": 625
+      },
+      {
+        "id": 2,
+        "nombre": "Recepción Memora",
+        "email": "recepcion@memora.local",
+        "rol": "recepcion",
+        "total_pedidos": 0,
+        "importe_total": 0
+      }
+    ],
+    "pedidos": [
+      {
+        "usuario_id": 3,
+        "id": 1,
+        "total_estimado": 625,
+        "fecha_creacion": "2026-05-27 08:49:04",
+        "estado": "en preparación",
+        "expediente_codigo": "EXP-2026-0001"
+      }
+    ]
+  }
+}

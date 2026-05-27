@@ -1,0 +1,17 @@
+CORRECCIÓN DE INSTALACIÓN NPM - MEMORA FLOW
+
+Incidencia detectada:
+Los package-lock.json entregados contenían URLs de descarga asociadas a un registro interno no accesible desde un equipo externo. Esto provocaba ECONNREFUSED durante `docker compose up --build` o `npm install`.
+
+Correcciones aplicadas:
+- backend/package-lock.json: referencias sustituídas por https://registry.npmjs.org/
+- frontend/package-lock.json: referencias sustituídas por https://registry.npmjs.org/
+- backend/.npmrc y frontend/.npmrc: registro público fijado explícitamente.
+- backend/Dockerfile y frontend/Dockerfile: instalación cambiada a `npm ci --no-audit --no-fund`.
+
+Verificación estática:
+- No quedan referencias al registro interno dentro del proyecto corregido.
+- Los dos Dockerfile copian .npmrc antes de instalar dependencias.
+
+Verificación pendiente del alumno:
+- Ejecutar la construcción Docker en su equipo con conexión a Internet y tomar captura final de los contenedores levantados.

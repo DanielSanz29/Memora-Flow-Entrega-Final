@@ -1,0 +1,14 @@
+VALIDACIÓN TÉCNICA - CAMBIOS 02
+
+Nuevas funciones incorporadas:
+- Pantalla de catálogos para asesor y recepción: ataúdes, flores y urnas con ilustraciones SVG y datos de la API.
+- Pantalla gerencial de funerarios y recepcionistas con pedidos vinculados al personal operativo.
+- Endpoint protegido GET /api/seguimiento/personal-pedidos.
+
+Comprobaciones realizadas:
+- Frontend: compilación de producción con Vite superada.
+- Backend: comprobación sintáctica de nuevos módulos superada.
+- API en modo reproducible DB_MODE=memory: 20/20 pruebas superadas.
+- Control de rol: la consulta de personal es accesible para gerencia y rechazada para asesor.
+
+La ejecución final en Docker/MySQL debe verificarse en el equipo de entrega para obtener las capturas finales.

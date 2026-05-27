@@ -1,0 +1,23 @@
+<svg width="640" height="420" viewBox="0 0 640 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Colección de urnas</title><desc id="desc">Ilustración de una urna cerámica minimalista en un entorno sereno.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="640" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9EFED"/><stop offset="1" stop-color="#F6F3EE"/>
+    </linearGradient>
+    <linearGradient id="ceramic" x1="259" y1="123" x2="376" y2="291" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#547071"/><stop offset="1" stop-color="#263F41"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" rx="28" fill="url(#bg)"/>
+  <path d="M164 314H474" stroke="#CDD7D3" stroke-width="10" stroke-linecap="round"/>
+  <path d="M281 132C288 122 298 116 320 116C342 116 353 122 359 132L365 149H275L281 132Z" fill="#273F41"/>
+  <rect x="273" y="146" width="94" height="14" rx="7" fill="#647C7C"/>
+  <path d="M275 163C265 181 257 203 257 226C257 271 279 294 320 294C361 294 383 271 383 226C383 203 375 181 365 163H275Z" fill="url(#ceramic)"/>
+  <path d="M288 187C314 173 342 174 365 189" stroke="#9AB2AD" stroke-width="4" stroke-linecap="round" opacity=".62"/>
+  <path d="M286 213C315 199 348 202 374 219" stroke="#9AB2AD" stroke-width="4" stroke-linecap="round" opacity=".48"/>
+  <path d="M289 240C316 230 346 234 370 249" stroke="#9AB2AD" stroke-width="4" stroke-linecap="round" opacity=".36"/>
+  <path d="M451 151C421 175 411 205 414 241C436 225 452 203 451 151Z" fill="#86A195"/>
+  <path d="M447 162L413 253" stroke="#526F62" stroke-width="4" stroke-linecap="round"/>
+  <path d="M191 194C218 210 230 235 230 265C206 252 190 228 191 194Z" fill="#A1B7AE"/>
+  <path d="M195 203L232 277" stroke="#6A877B" stroke-width="4" stroke-linecap="round"/>
+</svg>

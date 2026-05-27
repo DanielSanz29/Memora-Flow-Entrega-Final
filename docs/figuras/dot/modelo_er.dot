@@ -1,0 +1,28 @@
+digraph ER {
+ graph [rankdir=LR, bgcolor="white", pad=0.25, nodesep=0.45, ranksep=0.65, fontname="Arial"];
+ node [shape=record, style="filled", fillcolor="#F5F7F6", color="#A0AAA8", fontname="Arial", fontsize=10, margin="0.08"];
+ edge [fontname="Arial", fontsize=9, color="#4D605D", arrowsize=0.65];
+ rol [label="{ROL|id PK\lnombre\l}"];
+ usuario [label="{USUARIO|id PK\lemail\lrol_id FK\l}"];
+ cliente [label="{RESPONSABLE|id PK\ldni\lnombre\l}"];
+ fallecido [label="{FALLECIDO|id PK\ldni\lnombre\l}"];
+ expediente [label="{EXPEDIENTE|id PK\lcodigo\lcliente_id FK\lfallecido_id FK\l}", fillcolor="#E9F0EE", color="#446663"];
+ orden [label="{ORDEN FUNERARIA|id PK\lexpediente_id FK\lestado_id FK\ltotal_estimado\l}", fillcolor="#E9F0EE", color="#446663"];
+ estado [label="{ESTADO ORDEN|id PK\lnombre\l}"];
+ detalle [label="{DETALLE ORDEN|id PK\lorden_id FK\lproducto_id FK\lsubtotal\l}"];
+ producto [label="{PRODUCTO|id PK\lcategoria_id FK\lprecio_base\l}"];
+ servicio [label="{SERVICIO COMPLEMENTARIO|id PK\lprecio_base\l}"];
+ os [label="{ORDEN_SERVICIO|orden_id PK/FK\lservicio_id PK/FK\l}"];
+ obs [label="{OBSERVACIÓN|id PK\lorden_id FK\lusuario_id FK\l}"];
+ rol -> usuario [label="1:N"];
+ cliente -> expediente [label="1:N"];
+ fallecido -> expediente [label="1:N"];
+ expediente -> orden [label="1:N"];
+ estado -> orden [label="1:N"];
+ orden -> detalle [label="1:N"];
+ producto -> detalle [label="1:N"];
+ orden -> os [label="1:N"];
+ servicio -> os [label="1:N"];
+ orden -> obs [label="1:N"];
+ usuario -> obs [label="1:N"];
+}

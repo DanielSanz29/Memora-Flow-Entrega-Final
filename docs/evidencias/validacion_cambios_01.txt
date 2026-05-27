@@ -1,0 +1,20 @@
+MEMORA FLOW - VALIDACIÓN ITERACIÓN 01
+
+Cambios aplicados:
+- Eliminado bloque visible de credenciales de demostración en Login.
+- Eliminados valores precargados del formulario Login.
+- Eliminado bloque de demostración/defensa del Dashboard.
+- Sustituida introducción manual del ID de expediente por selección de expediente y visualización de su código.
+- Añadido listado general de órdenes con búsqueda, filtro por estado y acceso a edición.
+- Añadido historial de estados en el detalle de cada orden.
+- Actualizado registro de auditoría de creación y cambio de estado.
+
+Validaciones realizadas en entorno de revisión:
+- Comprobación sintáctica Node de los módulos backend modificados: SUPERADA.
+- Build del frontend con Vite: SUPERADA.
+- Pruebas API y PDF en modo DB_MODE=memory: 17/17 SUPERADAS.
+- Verificación de retirada de textos visibles no deseados del frontend: SUPERADA.
+
+Comprobación necesaria en el equipo del alumno:
+- Ejecutar con Docker Compose y MySQL la nueva carpeta descargada.
+- Acceder al módulo Historial de órdenes y realizar capturas finales.

@@ -1,0 +1,16 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white", pad=0.25, nodesep=0.55, ranksep=0.55, fontname="Arial"];
+  node [shape=box, style="rounded,filled", fillcolor="#F4F6F5", color="#9AA8A5", penwidth=1.2, fontname="Arial", fontsize=11, margin="0.18,0.12"];
+  edge [fontname="Arial", fontsize=9, color="#5A6B68", arrowsize=0.7];
+  user [label="Usuario interno\nRecepción / Asesor / Gerencia"];
+  front [label="Frontend SPA\nReact 19 + Vite 6\nTailwind CSS 3", fillcolor="#E9F0EE", color="#446663"];
+  api [label="API REST\nNode.js + Express 4\nJWT / validaciones", fillcolor="#E9F0EE", color="#446663"];
+  db [label="Persistencia principal\nMySQL 8.4\nClaves y relaciones"];
+  pdf [label="Exportación documental\nPDFKit\nResumen de orden"];
+  audit [label="Seguridad y control\nRoles / Auditoría\nConsultas parametrizadas"];
+  user -> front [label="HTTPS / interfaz"];
+  front -> api [label="JSON + JWT"];
+  api -> db [label="SQL"];
+  api -> pdf [label="generación"];
+  api -> audit [label="registra / controla"];
+}
